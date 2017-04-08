@@ -7,5 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 cohorts = Cohort.create(name: "Test Cohort")
-Student.create(first_name: "Test", last_name: "1", age: 10, cohort: cohorts.first)
-Student.create(first_name: "Test", last_name: "2", age: 20, cohort: cohorts.first)
+s1 = Student.create(first_name: "Test", last_name: "1", age: 10, cohort: cohorts.first)
+s2 = Student.create(first_name: "Test", last_name: "2", age: 20, cohort: cohorts.first)
+Comment.create(body: "party parrot", student: s1)
+Comment.create(body: "staging sloth", student: s2)

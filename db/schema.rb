@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407234427) do
+ActiveRecord::Schema.define(version: 20170408004523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20170407234427) do
     t.string   "name"
     t.datetime "start_date"
     t.datetime "end_date"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text    "body"
+    t.string  "tags"
+    t.integer "student_id"
+    t.index ["student_id"], name: "index_comments_on_student_id", using: :btree
   end
 
   create_table "students", force: :cascade do |t|

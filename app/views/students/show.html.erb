@@ -4,3 +4,16 @@
   <p>Age: <%= @student.age %></p>
   <p>Progress: </p>
 </div>
+
+<h3>Comments</h3>
+<ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <% if comment.tags %>
+        <br>
+        Tags: <%= comment.tags %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
