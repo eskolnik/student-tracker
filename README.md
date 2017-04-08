@@ -1,24 +1,20 @@
-# README
+#Student Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Allow me to track my students' progress through the cohort, and make notes about significant things that might affect them.
 
-Things you may want to cover:
+As a user
+I want to be able to see a dashboard of my current students with a brief summary
+So that I can track their progress
 
-* Ruby version
+As a user
+I want to view a student's grades in more detail
+so that I can tell what subjects they need help with
 
-* System dependencies
+As a user
+I want to add comments about a student
+so that I can remember specific information about them
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As a user
+I want to filter my comments based on certain tags
+such "personal" and "career track", etc
+So that I can search my notes

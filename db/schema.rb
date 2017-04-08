@@ -10,11 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306183340) do
+ActiveRecord::Schema.define(version: 20170407234427) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "cohorts", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "start_date"
+    t.datetime "end_date"
+  end
 
   create_table "students", force: :cascade do |t|
-    t.string  "name", null: false
-    t.integer "age",  null: false
+    t.string  "first_name", null: false
+    t.string  "last_name",  null: false
+    t.integer "age"
+    t.integer "cohort_id",  null: false
+    t.index ["cohort_id"], name: "index_students_on_cohort_id", using: :btree
   end
 
 end
